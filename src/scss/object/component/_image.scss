@@ -1,0 +1,49 @@
+.c-image {
+
+    &__logo {
+        width: 77px;
+        height: 19px;
+        position: absolute;
+        left: 50%;
+        top: 22px;
+        margin: 0 0 0 -32px;
+        padding: 0;
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__search {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 50px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        &__good {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 50px;
+            top: 10px;
+        }
+
+        &__cart {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}

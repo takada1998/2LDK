@@ -1,8 +1,6 @@
-<% var title = "TOP"; var description = "トップのdescription"; %> <% include
-src/ejs/template/_head %>
+<% var title="TOP" ; var description="トップのdescription" ; %>
+    <% include src/ejs/template/_head %>
 
-<h1>トップページへようこそ！！</h1>
-<a href="/about">to about</a>
-<div class="p-home-bg"></div>
-<div class="p-home-grid"></div>
-<% include src/ejs/template/_footer %>
+        <% include src/ejs/template/_header %>
+            <% include src/ejs/template/_main %>
+                <% include src/ejs/template/_footer %>

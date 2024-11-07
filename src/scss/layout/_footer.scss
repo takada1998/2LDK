@@ -37,6 +37,9 @@
 		}
 
 		li {
+			display: inline-block;
+			margin-right: 20px;
+
 			@media screen and (max-width: 1200px) {
 				margin-bottom: 20px;
 			}
@@ -44,6 +47,15 @@
 			@media screen and (max-width: 1200px) {
 				display: block;
 			}
+		}
+
+		a img {
+			display: block;
+			width: 20px;
+			height: 20px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
 		}
 	}
 

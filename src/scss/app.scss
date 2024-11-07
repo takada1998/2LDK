@@ -14,6 +14,7 @@
 
 @use 'layout/_footer';
 @use 'layout/_header';
+@use 'layout/_main';
 
 /*// ==========================================================================
 // Object
@@ -26,6 +27,8 @@
 @use 'object/component/_image';
 @use 'object/component/_hbgmenu';
 @use 'object/component/_link';
+@use 'object/component/_title';
+@use 'object/component/_btn';
 
 /*// -----------------------------------------------------------------
 // Project

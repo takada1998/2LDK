@@ -1,0 +1,19 @@
+.c-title {
+    text-align: center;
+    position: relative;
+    font-weight: 400;
+    margin: 0 0 70px;
+    font-size: 22px;
+    line-height: 1.6em;
+    width: 100%;
+
+    &::after {
+        content: "";
+        width: 1px;
+        height: 20px;
+        background: #B1B3B3;
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+    }
+}

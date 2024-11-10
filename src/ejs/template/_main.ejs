@@ -1,4 +1,57 @@
 <div class="l-main">
+    <!--topslider-->
+    <div class="l-main__topSlider">
+        <div class="l-main__topSlider__inner">
+            <div class="p-topSlider__item">
+                <div class="p-topSlider__image">
+                    <a href="#">
+                        <img src="assets/images/top1.jpeg" alt="top1">
+                    </a>
+                </div>
+                <div class="p-topSlider__title">
+                    <a href="#">top1</a>
+                </div>
+            </div>
+            <div class="p-topSlider__item">
+                <div class="p-topSlider__image">
+                    <a href="#">
+                        <img src="assets/images/top2.jpeg" alt="top2">
+                    </a>
+                </div>
+                <div class="p-topSlider__title">
+                    <a href="#">top2</a>
+                </div>
+            </div>
+            <div class="p-topSlider__item">
+                <div class="p-topSlider__image">
+                    <a href="#">
+                        <img src="assets/images/top3.jpeg" alt="top3">
+                    </a>
+                </div>
+                <div class="p-topSlider__title">
+                    <a href="#">top3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.l-main__topSlider__inner').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            arrows: true,
+            infinite: true,
+            centerMode: false,
+            variableWidth: true
+            //centerPadding: '20%'
+        });
+    </script>
+
     <div class="l-main__brand">
         <h2 class="c-title">HOUSE BRAND</h2>
         <div class="l-main__brand__wrap">

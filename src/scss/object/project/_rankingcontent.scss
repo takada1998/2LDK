@@ -1,6 +1,38 @@
 .p-rankingcontent {
-    padding: 20px;
+    padding-top: 40px;
     border-top: 1px solid #ddd;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
+
+    &__inner {
+        width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 1260px) {
+            width: auto;
+        }
+    }
+
+    &__item {
+        width: calc(25% - 45px);
+        margin-bottom: 60px;
+        position: relative;
+
+        @media screen and (max-width: 1200px) {
+            width: calc(25% - 30px);
+        }
+
+        @media screen and (max-width: 768px) {
+            width: calc(50% - 7px);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin: 20px 0 5px;
+    }
 }

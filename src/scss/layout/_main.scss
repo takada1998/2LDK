@@ -105,7 +105,7 @@
 
     &__topSlider {
         margin-bottom: 100px;
-        margin-top: 100px;
+        margin-top: 150px;
 
         &__inner {
             width: 100%;
@@ -116,4 +116,52 @@
         }
     }
 
+    &__feature {
+        background: #F4F7F7 !important;
+        padding: 100px 0px 80px !important;
+    }
+
+    &__featureSlider {
+        overflow: hidden;
+        width: 100%;
+
+        &__inner {
+            display: flex;
+            box-sizing: border-box;
+        }
+    }
+
+    &__recommend {
+        border-top: 1px solid #F5F7F7;
+        padding: 100px 0;
+
+        &__inner {
+            display: block;
+            zoom: 1;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    &__ranking {
+        background-color: #F5F7F7;
+        padding: 100px 0;
+        overflow-x: hidden;
+    }
+}
+
+.l-main__featureSlider .slick-prev {
+    left: 0;
+}
+
+.l-main__featureSlider .slick-next {
+    right: 0;
+}
+
+.l-main__recommend .slick-prev {
+    left: 0;
+}
+
+.l-main__recommend .slick-next {
+    right: 0;
 }

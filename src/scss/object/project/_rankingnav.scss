@@ -1,0 +1,27 @@
+.p-rankingnav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // タブボタン
+    label {
+        width: 100%;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1.4em;
+        position: relative;
+        box-sizing: border-box;
+        max-width: 80px;
+    }
+
+    // 選択中のタブのスタイル
+    input[type="radio"]:checked+label {
+        border-bottom: 1px solid #333;
+    }
+}

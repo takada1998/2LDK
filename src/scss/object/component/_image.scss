@@ -28,6 +28,7 @@
             left: 50px;
             top: 10px;
             cursor: pointer;
+            padding: 7px;
         }
 
         &__good {
@@ -36,6 +37,7 @@
             position: absolute;
             right: 50px;
             top: 10px;
+            padding: 5px;
         }
 
         &__cart {
@@ -44,6 +46,7 @@
             position: absolute;
             right: 10px;
             top: 10px;
+            padding: 5px;
         }
     }
 }

@@ -21,6 +21,10 @@
 		width: 20%;
 		font-size: 14px;
 		line-height: 1.6em;
+
+		@media screen and (max-width: 768px) {
+			width: 26%;
+		}
 	}
 
 	dd {
@@ -29,6 +33,10 @@
 		width: 80%;
 		font-size: 12px;
 		line-height: 1.6em;
+
+		@media screen and (max-width: 768px) {
+			width: 70%;
+		}
 
 		ul {
 			list-style: none;
@@ -42,10 +50,6 @@
 
 			@media screen and (max-width: 1200px) {
 				margin-bottom: 20px;
-			}
-
-			@media screen and (max-width: 1200px) {
-				display: block;
 			}
 		}
 

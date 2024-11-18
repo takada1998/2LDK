@@ -1,3 +1,4 @@
+<!--ハンバーガーメニュー-->
 <div class="l-hbg">
     <div class="l-hbg__top">
         <span>WELCOME</span>
@@ -34,4 +35,21 @@
             </li>
         </ul>
     </div>
+    <div class="l-hbg__btn"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hbgMenu = document.querySelector('.c-hbgmenu');
+        const hbg = document.querySelector('.l-hbg');
+        const hbgCloseBtn = document.querySelector('.l-hbg__btn');
+
+        hbgMenu.addEventListener('click', function () {
+            hbg.classList.toggle('is-active');
+        });
+
+        hbgCloseBtn.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+        });
+    });
+</script>

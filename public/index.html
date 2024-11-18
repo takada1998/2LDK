@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<link href="assets/stylesheets/bundlee81000f76a026f2de3dc.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle43cadcc39f9fd7b43758.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -60,7 +60,8 @@
         </div>
     </div>
 </div>
-            <div class="l-hbg">
+            <!--ハンバーガーメニュー-->
+<div class="l-hbg">
     <div class="l-hbg__top">
         <span>WELCOME</span>
     </div>
@@ -96,7 +97,24 @@
             </li>
         </ul>
     </div>
+    <div class="l-hbg__btn"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hbgMenu = document.querySelector('.c-hbgmenu');
+        const hbg = document.querySelector('.l-hbg');
+        const hbgCloseBtn = document.querySelector('.l-hbg__btn');
+
+        hbgMenu.addEventListener('click', function () {
+            hbg.classList.toggle('is-active');
+        });
+
+        hbgCloseBtn.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+        });
+    });
+</script>
                 <div class="l-main">
     <!--topslider-->
     <div class="l-main__topSlider">
@@ -1031,6 +1049,6 @@
 </div>
 
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundlee81000f76a026f2de3dc.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle43cadcc39f9fd7b43758.js"></script></body>
 
 </html>

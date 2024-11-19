@@ -54,4 +54,14 @@
         line-height: 1.6em;
         font-weight: 400;
     }
+
+    &__rank {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        font-size: 10px;
+        padding: 5px 10px;
+        z-index: 10;
+    }
 }

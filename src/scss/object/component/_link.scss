@@ -1,0 +1,30 @@
+.c-link__list a {
+    position: relative;
+    display: inline-block;
+    /* 必須ではありませんが推奨 */
+    text-decoration: none;
+    /* デフォルトのアンダーラインを削除 */
+    color: #000;
+    /* 通常時のリンク色 */
+    transition: color 0.3s ease;
+    /* 色の変化をスムーズに */
+}
+
+.c-link__list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.c-link__list a:hover {
+    color: #333;
+}
+
+.c-link__list a:hover::after {
+    width: 100%;
+}

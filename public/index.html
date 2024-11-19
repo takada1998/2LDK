@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<link href="assets/stylesheets/bundle43cadcc39f9fd7b43758.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle2468cabdf0724e6d155b.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -99,21 +99,33 @@
     </div>
     <div class="l-hbg__btn"></div>
 </div>
-
+<div class="l-hbg__overlay"></div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const hbgMenu = document.querySelector('.c-hbgmenu');
-        const hbg = document.querySelector('.l-hbg');
-        const hbgCloseBtn = document.querySelector('.l-hbg__btn');
+        const hbgMenu = document.querySelector('.c-hbgmenu'); // ハンバーガーメニュー
+        const hbg = document.querySelector('.l-hbg'); // ハンバーガーメニュー本体
+        const hbgCloseBtn = document.querySelector('.l-hbg__btn'); // 閉じるボタン
+        const overlay = document.querySelector('.l-hbg__overlay'); // オーバーレイ
 
+        // メニューを開くとき
         hbgMenu.addEventListener('click', function () {
-            hbg.classList.toggle('is-active');
+            hbg.classList.add('is-active');
+            overlay.classList.add('is-active'); // オーバーレイを表示
         });
 
+        // メニューを閉じるとき
         hbgCloseBtn.addEventListener('click', function () {
             hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active'); // オーバーレイを非表示
+        });
+
+        // オーバーレイをクリックしたらメニューを閉じる
+        overlay.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active'); // オーバーレイを非表示
         });
     });
+
 </script>
                 <div class="l-main">
     <!--topslider-->
@@ -464,6 +476,7 @@
             variableWidth: true,
         });</script>
 
+    <!--RANKING-->
     <div class="l-main__ranking">
         <h2 class="c-title">RANKING</h2>
         <div class="p-rankingnav">
@@ -488,6 +501,7 @@
                 <div class="p-rankingcontent__inner">
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">1</span> <!-- ランキング順位 -->
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -499,6 +513,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">2</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -510,6 +525,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">3</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -521,6 +537,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">4</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -532,6 +549,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">5</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -543,6 +561,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">6</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -554,6 +573,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">7</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -565,6 +585,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">8</span>
                             <a href="#">
                                 <img src="assets/images/recommend1.jpeg" alt="recommend1">
                             </a>
@@ -580,6 +601,7 @@
                 <div class="p-rankingcontent__inner">
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">1</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -591,6 +613,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">2</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -602,6 +625,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">3</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -613,6 +637,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">4</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -624,6 +649,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">5</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -635,6 +661,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">6</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -646,6 +673,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">7</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -657,6 +685,7 @@
                     </div>
                     <div class="p-rankingcontent__item">
                         <div class="p-rankingcontent__image">
+                            <span class="p-rankingcontent__rank">8</span>
                             <a href="#">
                                 <img src="assets/images/recommend2.jpeg" alt="recommend2">
                             </a>
@@ -673,6 +702,7 @@
             <div class="p-rankingcontent__inner">
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">1</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -684,6 +714,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">2</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -695,6 +726,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">3</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -706,6 +738,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">4</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -717,6 +750,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">5</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -728,6 +762,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">6</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -739,6 +774,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">7</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -750,6 +786,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">8</span>
                         <a href="#">
                             <img src="assets/images/recommend3.jpeg" alt="recommend3">
                         </a>
@@ -765,6 +802,7 @@
             <div class="p-rankingcontent__inner">
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">1</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -776,6 +814,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">2</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -787,6 +826,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">3</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -798,6 +838,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">4</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -809,6 +850,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">5</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -820,6 +862,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">6</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -831,6 +874,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">7</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -842,6 +886,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">8</span>
                         <a href="#">
                             <img src="assets/images/recommend4.jpeg" alt="recommend4">
                         </a>
@@ -857,6 +902,7 @@
             <div class="p-rankingcontent__inner">
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">1</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -868,6 +914,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">2</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -879,6 +926,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">3</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -890,6 +938,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">4</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -901,6 +950,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">5</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -912,6 +962,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">6</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -923,6 +974,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">7</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -934,6 +986,7 @@
                 </div>
                 <div class="p-rankingcontent__item">
                     <div class="p-rankingcontent__image">
+                        <span class="p-rankingcontent__rank">8</span>
                         <a href="#">
                             <img src="assets/images/recommend8.jpeg" alt="recommend8">
                         </a>
@@ -945,7 +998,30 @@
                 </div>
             </div>
         </div>
+        <div class="c-btn__totop"></div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toTopButton = document.querySelector('.c-btn__totop'); // トップへ戻るボタン
+
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 300) { // スクロール量が300pxを超えたら表示
+                        toTopButton.classList.add('is-visible');
+                    } else {
+                        toTopButton.classList.remove('is-visible');
+                    }
+                });
+
+                toTopButton.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
     </div>
+
 
 
     <script>
@@ -1049,6 +1125,6 @@
 </div>
 
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle43cadcc39f9fd7b43758.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle2468cabdf0724e6d155b.js"></script></body>
 
 </html>

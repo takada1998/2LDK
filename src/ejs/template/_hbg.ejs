@@ -37,19 +37,31 @@
     </div>
     <div class="l-hbg__btn"></div>
 </div>
-
+<div class="l-hbg__overlay"></div>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const hbgMenu = document.querySelector('.c-hbgmenu');
-        const hbg = document.querySelector('.l-hbg');
-        const hbgCloseBtn = document.querySelector('.l-hbg__btn');
+        const hbgMenu = document.querySelector('.c-hbgmenu'); // ハンバーガーメニュー
+        const hbg = document.querySelector('.l-hbg'); // ハンバーガーメニュー本体
+        const hbgCloseBtn = document.querySelector('.l-hbg__btn'); // 閉じるボタン
+        const overlay = document.querySelector('.l-hbg__overlay'); // オーバーレイ
 
+        // メニューを開くとき
         hbgMenu.addEventListener('click', function () {
-            hbg.classList.toggle('is-active');
+            hbg.classList.add('is-active');
+            overlay.classList.add('is-active'); // オーバーレイを表示
         });
 
+        // メニューを閉じるとき
         hbgCloseBtn.addEventListener('click', function () {
             hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active'); // オーバーレイを非表示
+        });
+
+        // オーバーレイをクリックしたらメニューを閉じる
+        overlay.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active'); // オーバーレイを非表示
         });
     });
+
 </script>

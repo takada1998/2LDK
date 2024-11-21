@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<link href="assets/stylesheets/bundle2468cabdf0724e6d155b.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundlea17f3d8eb31a0df0c61c.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -78,7 +78,74 @@
     <div class="l-hbg__nav">
         <ul>
             <li>
-                <span>ITEM</span>
+                <span>ITEM
+                    <span class>open</span>
+                </span>
+                <ul>
+                    <li>
+                        <a href="#">ALL</a>
+                    </li>
+                    <li>
+                        <a href="#">MENS</a>
+                        <ul>
+                            <li>
+                                <a href="#">TOPS</a>
+                            </li>
+                            <li>
+                                <a href="#">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="#">BOTTOMS</a>
+                            </li>
+                            <li>
+                                <a href="#">SHOSE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">WOMEN</a>
+                        <ul>
+                            <li>
+                                <a href="#">TOPS</a>
+                            </li>
+                            <li>
+                                <a href="#">OUTER</a>
+                            </li>
+                            <li>
+                                <a href="#">BOTTOMS</a>
+                            </li>
+                            <li>
+                                <a href="#">SHOSE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">GOODS</a>
+                        <ul>
+                            <li>
+                                <a href="#">SHOES</a>
+                            </li>
+                            <li>
+                                <a href="#">SOCKS</a>
+                            </li>
+                            <li>
+                                <a href="#">HEADWEAR</a>
+                            </li>
+                            <li>
+                                <a href="#">BAG</a>
+                            </li>
+                            <li>
+                                <a href="#">FASHION GOODS</a>
+                            </li>
+                            <li>
+                                <a href="#">HOME GOODS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SALE</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <span>FEATURE</span>
@@ -124,8 +191,22 @@
             hbg.classList.remove('is-active');
             overlay.classList.remove('is-active'); // オーバーレイを非表示
         });
-    });
 
+        // "open" を押下した際にその下の項目を開閉
+        const openSpans = document.querySelectorAll('.l-hbg__nav span > span'); // "open" の要素を取得
+
+        openSpans.forEach(span => {
+            span.addEventListener('click', function (event) {
+                const parentLi = this.closest('li'); // 親の `<li>` を取得
+                const subMenu = parentLi.querySelector('ul'); // 子要素の `<ul>` を取得
+
+                if (subMenu) {
+                    event.preventDefault(); // デフォルトの動作を無効化
+                    subMenu.classList.toggle('is-open'); // クラスを切り替えて開閉
+                }
+            });
+        });
+    });
 </script>
                 <div class="l-main">
     <!--topslider-->
@@ -1125,6 +1206,6 @@
 </div>
 
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle2468cabdf0724e6d155b.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundlea17f3d8eb31a0df0c61c.js"></script></body>
 
 </html>

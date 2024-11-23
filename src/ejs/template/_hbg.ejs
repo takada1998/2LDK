@@ -24,7 +24,7 @@
                         <a href="#">ALL</a>
                     </li>
                     <li>
-                        <a href="#">MENS</a>
+                        <a href="#">MENS<span class>open</span></a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">WOMEN</a>
+                        <a href="#">WOMEN<span class>open</span></a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -58,7 +58,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">GOODS</a>
+                        <a href="#">GOODS<span class>open</span></a>
                         <ul>
                             <li>
                                 <a href="#">SHOES</a>
@@ -130,11 +130,11 @@
             overlay.classList.remove('is-active'); // オーバーレイを非表示
         });
 
-        // "open" を押下した際にその下の項目を開閉
-        const openSpans = document.querySelectorAll('.l-hbg__nav span > span'); // "open" の要素を取得
+        // "open" または "MENS, WOMEN, GOODS" のリンクを押下した際にその下の項目を開閉
+        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a'); // "open" とリンクの要素を取得
 
-        openSpans.forEach(span => {
-            span.addEventListener('click', function (event) {
+        toggleElements.forEach(element => {
+            element.addEventListener('click', function (event) {
                 const parentLi = this.closest('li'); // 親の `<li>` を取得
                 const subMenu = parentLi.querySelector('ul'); // 子要素の `<ul>` を取得
 
@@ -145,4 +145,5 @@
             });
         });
     });
+
 </script>

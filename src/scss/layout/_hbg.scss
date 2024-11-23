@@ -73,8 +73,78 @@
             list-style: none;
         }
 
-        li {
+        li:not(:last-child) {
             border-bottom: 1px solid #E8EBEB;
+
+            ul {
+                border-top: 1px solid #E8EBEB;
+                background: #F5F7F7;
+                margin: 0;
+                padding: 0 30px;
+                list-style: none;
+
+                li a {
+                    padding: 20px 30px 20px 20px;
+                    position: relative;
+                    display: block;
+
+                    span {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -15px;
+                        text-indent: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        transition: transform 0.3s;
+                        font-size: 0;
+                        line-height: 0;
+                        cursor: pointer;
+                        background: #F5F7F7;
+
+                        &::before {
+                            content: "";
+                            width: 1px;
+                            height: 8px;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            margin-top: -4px;
+                            background: #000;
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 1px;
+                            height: 8px;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            margin-top: -4px;
+                            background: #000;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding-left: 15px;
+
+                    li {
+                        border-bottom: none;
+
+                        a {
+                            padding: 15px 30px 15px 20px;
+                        }
+                    }
+                }
+            }
         }
 
         span {
@@ -172,13 +242,9 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        /* 半透明の黒 */
         z-index: 9999;
-        /* ハンバーガーメニューの下、他の要素の上に表示 */
         opacity: 0;
-        /* 初期状態で透明 */
         visibility: hidden;
-        /* 初期状態で非表示 */
         transition: opacity 0.3s ease;
     }
 }
@@ -217,17 +283,24 @@
     transition: all 0.3s ease;
 }
 
-/* is-open クラスが追加された場合に表示 */
 .l-hbg__nav ul ul.is-open {
     display: block;
 }
 
-/* MENS, WOMEN, GOODS のリンクは常に表示 */
 .l-hbg__nav a {
     display: inline-block;
     color: #000;
-    /* 必要に応じてリンク色を設定 */
     text-decoration: none;
     padding: 10px 0;
-    /* 見栄えを調整 */
+}
+
+/* 初期状態で ul を非表示 */
+.l-hbg__nav ul ul {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* is-open クラスが追加されたときに表示 */
+.l-hbg__nav ul ul.is-open {
+    display: block;
 }

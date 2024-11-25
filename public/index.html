@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<link href="assets/stylesheets/bundlef7b5b964da9089ac951a.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle91875bc2045aa396a2bc.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
@@ -197,8 +197,8 @@
 
         toggleElements.forEach(element => {
             element.addEventListener('click', function (event) {
-                const parentLi = this.closest('li'); // 親の `<li>` を取得
-                const subMenu = parentLi.querySelector('ul'); // 子要素の `<ul>` を取得
+                const parentLi = this.closest('li'); // 親の <li> を取得
+                const subMenu = parentLi.querySelector('ul'); // 子要素の <ul> を取得
 
                 if (subMenu) {
                     event.preventDefault(); // デフォルトの動作を無効化
@@ -361,7 +361,10 @@
                 <div class="l-main__brand__item">
                     <div class="l-main__brand__image">
                         <a href="#">
-                            <img src="assets/images/brand1.jpeg" alt="brand1">
+                            <picture>
+                                <source srcset="assets/images/brand1sp.jpeg" media="(max-width: 768px)">
+                                <img src="assets/images/brand1.jpeg" alt="Brand">
+                            </picture>
                         </a>
                     </div>
                     <div class="l-main__brand__name">
@@ -371,7 +374,10 @@
                 <div class="l-main__brand__item">
                     <div class="l-main__brand__image">
                         <a href="#">
-                            <img src="assets/images/brand2.jpeg" alt="brand2">
+                            <picture>
+                                <source srcset="assets/images/brand2sp.jpeg" media="(max-width: 768px)">
+                                <img src="assets/images/brand2.jpeg" alt="Brand">
+                            </picture>
                         </a>
                     </div>
                     <div class="l-main__brand__name">
@@ -381,7 +387,10 @@
                 <div class="l-main__brand__item">
                     <div class="l-main__brand__image">
                         <a href="#">
-                            <img src="assets/images/brand3.jpeg" alt="brand3">
+                            <picture>
+                                <source srcset="assets/images/brand3sp.jpeg" media="(max-width: 768px)">
+                                <img src="assets/images/brand3.jpeg" alt="Brand">
+                            </picture>
                         </a>
                     </div>
                     <div class="l-main__brand__name">
@@ -1207,6 +1216,6 @@
 </div>
 
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundlef7b5b964da9089ac951a.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle91875bc2045aa396a2bc.js"></script></body>
 
 </html>

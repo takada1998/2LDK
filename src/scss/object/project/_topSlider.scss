@@ -37,6 +37,11 @@
     margin-top: -50px;
     outline: none;
     z-index: 9997;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        /* 背景色を少し濃く */
+    }
 }
 
 

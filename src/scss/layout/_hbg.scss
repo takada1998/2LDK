@@ -294,13 +294,11 @@
     padding: 10px 0;
 }
 
-/* 初期状態で ul を非表示 */
 .l-hbg__nav ul ul {
     display: none;
     transition: all 0.3s ease;
 }
 
-/* is-open クラスが追加されたときに表示 */
 .l-hbg__nav ul ul.is-open {
     display: block;
 }

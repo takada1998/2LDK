@@ -294,11 +294,6 @@
     padding: 10px 0;
 }
 
-.l-hbg__nav ul ul {
-    display: none;
-    transition: all 0.3s ease;
-}
-
-.l-hbg__nav ul ul.is-open {
-    display: block;
+.l-hbg__nav a:hover {
+    color: rgba(0, 0, 0, 0.6);
 }

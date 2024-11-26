@@ -47,8 +47,17 @@
             arrows: true,
             infinite: true,
             centerMode: true,
-            variableWidth: true
+            variableWidth: true,
             //centerPadding: '20%'
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        arrows: false,
+                        centerPadding: '30px',
+                        slidesToShow: 1
+                    }
+                }]
         });
     </script>
 
@@ -140,6 +149,15 @@
             infinite: true,
             centerMode: true,
             variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerPadding: '30px',
+                        slidesToShow: 1
+                    }
+                }]
         });</script>
 
     <!--BRAND-->
@@ -354,6 +372,13 @@
             infinite: true,
             centerMode: true,
             variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false
+                    }
+                }]
         });</script>
 
     <!--RANKING-->

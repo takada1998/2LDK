@@ -31,4 +31,8 @@
         margin-top: 4px;
         transition: width 0.3s;
     }
+
+    &:hover::after {
+        width: 28px;
+    }
 }

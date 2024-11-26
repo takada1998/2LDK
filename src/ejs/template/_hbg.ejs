@@ -112,35 +112,30 @@
         const hbgCloseBtn = document.querySelector('.l-hbg__btn'); // 閉じるボタン
         const overlay = document.querySelector('.l-hbg__overlay'); // オーバーレイ
 
-        // メニューを開くとき
         hbgMenu.addEventListener('click', function () {
             hbg.classList.add('is-active');
-            overlay.classList.add('is-active'); // オーバーレイを表示
+            overlay.classList.add('is-active');
         });
 
-        // メニューを閉じるとき
         hbgCloseBtn.addEventListener('click', function () {
             hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active'); // オーバーレイを非表示
+            overlay.classList.remove('is-active');
         });
 
-        // オーバーレイをクリックしたらメニューを閉じる
         overlay.addEventListener('click', function () {
             hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active'); // オーバーレイを非表示
+            overlay.classList.remove('is-active');
         });
 
-        // "open" または "MENS, WOMEN, GOODS" のリンクを押下した際にその下の項目を開閉
-        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a'); // "open" とリンクの要素を取得
-
+        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a');
         toggleElements.forEach(element => {
             element.addEventListener('click', function (event) {
-                const parentLi = this.closest('li'); // 親の <li> を取得
-                const subMenu = parentLi.querySelector('ul'); // 子要素の <ul> を取得
+                const parentLi = this.closest('li');
+                const subMenu = parentLi.querySelector('ul');
 
                 if (subMenu) {
-                    event.preventDefault(); // デフォルトの動作を無効化
-                    subMenu.classList.toggle('is-open'); // クラスを切り替えて開閉
+                    event.preventDefault();
+                    subMenu.classList.toggle('is-open');
                 }
             });
         });

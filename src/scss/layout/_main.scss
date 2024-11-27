@@ -83,7 +83,7 @@
 
     &__newitem {
         background: #F5F7F7;
-        padding: 100px 30px;
+        padding: 80px 30px;
 
         @media screen and (max-width: 1260px) {
             width: auto;
@@ -134,6 +134,10 @@
         margin-bottom: 100px;
         margin-top: 100px;
 
+        @media screen and (max-width: 768px) {
+            margin-bottom: 70px;
+        }
+
         &__inner {
             width: 100%;
             overflow: hidden;
@@ -145,7 +149,7 @@
 
     &__feature {
         background: #F4F7F7 !important;
-        padding: 100px 0px 80px !important;
+        padding: 80px 0px 80px !important;
     }
 
     &__featureSlider {
@@ -160,7 +164,7 @@
 
     &__recommend {
         border-top: 1px solid #F5F7F7;
-        padding: 100px 0;
+        padding: 80px 0;
 
         &__inner {
             display: block;
@@ -172,7 +176,7 @@
 
     &__ranking {
         background-color: #F5F7F7;
-        padding: 100px 30px 50px;
+        padding: 80px 30px 50px;
         overflow-x: hidden;
     }
 }

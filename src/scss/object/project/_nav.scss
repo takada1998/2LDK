@@ -21,6 +21,10 @@
             text-align: center;
             padding-bottom: 10px;
 
+            @media screen and (max-width: 768px) {
+                padding-bottom: 0;
+            }
+
             &:hover {
                 color: rgba(0, 0, 0, 0.6);
             }

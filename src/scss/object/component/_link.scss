@@ -1,13 +1,9 @@
 .c-link__list a {
     position: relative;
     display: inline-block;
-    /* 必須ではありませんが推奨 */
     text-decoration: none;
-    /* デフォルトのアンダーラインを削除 */
     color: #000;
-    /* 通常時のリンク色 */
     transition: color 0.3s ease;
-    /* 色の変化をスムーズに */
 }
 
 .c-link__list a::after {

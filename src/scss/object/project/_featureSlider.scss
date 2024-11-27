@@ -20,6 +20,10 @@
         line-height: 1.4em;
         font-weight: normal;
         margin: 0 0 10px;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.6);
+        }
     }
 
     &__text {

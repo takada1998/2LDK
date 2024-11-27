@@ -20,6 +20,10 @@
             line-height: 50px;
             text-align: center;
             padding-bottom: 10px;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+            }
         }
     }
 }

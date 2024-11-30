@@ -32,15 +32,16 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<link href="assets/stylesheets/bundle81ee9111c97ca5eac9de.css" rel="stylesheet"></head>
+    <!--<script src="assets/javascripts/bundle.js"></script>-->
+<link href="assets/stylesheets/bundle552d2eabdff158f143d3.css" rel="stylesheet"></head>
 
 <body>
     <div class="l-wrap">
 
-        <div class="l-header">
+        <header class="l-header">
     <div class="c-hbgmenu"></div>
     <div class="c-image__logo">
-        <a href="#">2LDK</a>
+        <h1><a href="#">2LDK</a></h1>
     </div>
     <div class="c-image__btn__search">
         <a href="#"><img src="assets/images/search.png" alt="search"></a>
@@ -51,17 +52,17 @@
     <div class="c-image__btn__cart">
         <a href="#"><img src="assets/images/cart.png" alt="cart"></a>
     </div>
-    <div class="p-nav">
+    <section class="p-nav">
         <div class="p-nav__item"><a href="#">MENS</a>
         </div>
         <div class="p-nav__item"><a href="#">WOMENS</a>
         </div>
         <div class="p-nav__item"><a href="#">GOODS</a>
         </div>
-    </div>
-</div>
+    </section>
+</header>
             <!--ハンバーガーメニュー-->
-<div class="l-hbg">
+<section class="l-hbg">
     <div class="l-hbg__top">
         <span>WELCOME</span>
     </div>
@@ -86,7 +87,10 @@
                         <a href="#">ALL</a>
                     </li>
                     <li>
-                        <a href="#">MENS<span class>open</span></a>
+                        <a href="#">
+                            MENS
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -103,7 +107,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">WOMEN<span class>open</span></a>
+                        <a href="#">
+                            WOMEN
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -120,7 +127,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">GOODS<span class>open</span></a>
+                        <a href="#">
+                            WOMEN
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">SHOES</a>
@@ -165,48 +175,12 @@
         </ul>
     </div>
     <div class="l-hbg__btn"></div>
-</div>
+</section>
 <div class="l-hbg__overlay"></div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const hbgMenu = document.querySelector('.c-hbgmenu'); // ハンバーガーメニュー
-        const hbg = document.querySelector('.l-hbg'); // ハンバーガーメニュー本体
-        const hbgCloseBtn = document.querySelector('.l-hbg__btn'); // 閉じるボタン
-        const overlay = document.querySelector('.l-hbg__overlay'); // オーバーレイ
-
-        hbgMenu.addEventListener('click', function () {
-            hbg.classList.add('is-active');
-            overlay.classList.add('is-active');
-        });
-
-        hbgCloseBtn.addEventListener('click', function () {
-            hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active');
-        });
-
-        overlay.addEventListener('click', function () {
-            hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active');
-        });
-
-        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a');
-        toggleElements.forEach(element => {
-            element.addEventListener('click', function (event) {
-                const parentLi = this.closest('li');
-                const subMenu = parentLi.querySelector('ul');
-
-                if (subMenu) {
-                    event.preventDefault();
-                    subMenu.classList.toggle('is-open');
-                }
-            });
-        });
-    });
-
-</script>
-                <div class="l-main">
+<!--<script src="assets/javascripts/hbgMenu.js"></script>-->
+                <main class="l-main">
     <!--topslider-->
-    <div class="l-main__topSlider">
+    <section class="l-main__topSlider">
         <div class="l-main__topSlider__inner">
             <div class="p-topSlider__item">
                 <div class="p-topSlider__image">
@@ -239,36 +213,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script>
-        $('.l-main__topSlider__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: false,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            //centerPadding: '20%'
-            responsive: [
-                {
-                    breakpoint: 1440,
-                    settings: {
-                        arrows: false,
-                        centerPadding: '30px',
-                        slidesToShow: 1
-                    }
-                }]
-        });
-    </script>
-
+    </section>
     <!--FEATURE-->
-    <div class="l-main__feature">
+    <section class="l-main__feature">
         <h2 class="c-title">FEATURE</h2>
         <div class="l-main__featureSlider">
             <div class="l-main__featureSlider__inner">
@@ -343,31 +290,9 @@
         <div class="c-btn c-btn__feature">
             <a href="#"><span class="c-text__btn">VIEW ALL</span></a>
         </div>
-    </div>
-
-    <script>
-        $('.l-main__featureSlider__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            dots: true,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerPadding: '30px',
-                        slidesToShow: 1
-                    }
-                }]
-        });</script>
-
+    </section>
     <!--BRAND-->
-    <div class="l-main__brand">
+    <section class="l-main__brand">
         <h2 class="c-title">HOUSE BRAND</h2>
         <div class="l-main__brand__wrap">
             <div class="l-main__brand__inner">
@@ -412,10 +337,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--newitem-->
-    <div class="l-main__newitem">
+    <section class="l-main__newitem">
         <h2 class="c-title">NEW ITEM</h2>
         <div class="l-main__newitem__list">
             <div class="l-main__newitem__inner">
@@ -480,10 +405,10 @@
         <div class="c-btn">
             <a href="#"><span class="c-text__btn">MORE</span></a>
         </div>
-    </div>
+    </section>
 
     <!--RECOMMEND ITEMS-->
-    <div class="l-main__recommend">
+    <section class="l-main__recommend">
         <h2 class="c-title">RECOMMEND ITEMS</h2>
         <div class="l-main__recommend__list">
             <div class="l-main__recommend__inner">
@@ -566,29 +491,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <script>
-        $('.l-main__recommend__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            dots: true,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false
-                    }
-                }]
-        });</script>
-
+    </section>
     <!--RANKING-->
-    <div class="l-main__ranking">
+    <section class="l-main__ranking">
         <h2 class="c-title">RANKING</h2>
         <div class="p-rankingnav">
             <input type="radio" id="tab-all" name="ranking-tab" checked>
@@ -1110,63 +1015,9 @@
             </div>
         </div>
         <div class="c-btn__totop"></div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toTopButton = document.querySelector('.c-btn__totop'); // トップへ戻るボタン
-
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 300) { // スクロール量が300pxを超えたら表示
-                        toTopButton.classList.add('is-visible');
-                    } else {
-                        toTopButton.classList.remove('is-visible');
-                    }
-                });
-
-                toTopButton.addEventListener('click', function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        </script>
-    </div>
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.p-rankingnav input[type="radio"]');
-            const contents = document.querySelectorAll('.p-rankingcontent_content');
-
-            contents.forEach(content => {
-                content.style.display = 'none'; // すべてのコンテンツを非表示に
-            });
-            document.getElementById('p-rankingcontent_content-all').style.display = 'block';
-
-            tabs.forEach(tab => {
-                tab.addEventListener('change', function () {
-                    // 全てのコンテンツを非表示にする
-                    contents.forEach(content => {
-                        content.style.display = 'none';
-                    });
-
-                    // 選択されたタブに対応するコンテンツを表示する
-                    const targetContent = document.getElementById(`p-rankingcontent_content-${this.id.split('-')[1]}`);
-                    if (targetContent) {
-                        targetContent.style.display = 'block';
-                    }
-                });
-            });
-        });
-
-    </script>
-</div>
-
-
-</div>
-                    <div class="l-footer">
+    </section>
+</main>
+                    <footer class="l-footer">
     <dl>
         <dt>BRAND</dt>
         <dd>
@@ -1233,9 +1084,150 @@
     <div class="l-footer__copyright">
         <h2>© I.D.Land Company</h2>
     </div>
-</div>
-
+</footer>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundle81ee9111c97ca5eac9de.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle552d2eabdff158f143d3.js"></script></body><!-- body -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hbgMenu = document.querySelector('.c-hbgmenu');
+        const hbg = document.querySelector('.l-hbg');
+        const hbgCloseBtn = document.querySelector('.l-hbg__btn');
+        const overlay = document.querySelector('.l-hbg__overlay');
+
+        // ハンバーガーメニューの開閉
+        hbgMenu.addEventListener('click', function () {
+            hbg.classList.add('is-active');
+            overlay.classList.add('is-active');
+        });
+
+        hbgCloseBtn.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active');
+        });
+
+        overlay.addEventListener('click', function () {
+            hbg.classList.remove('is-active');
+            overlay.classList.remove('is-active');
+        });
+
+        // トグルメニューの開閉（MENS, WOMEN, GOODS, ITEMを含む）
+        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a, .l-hbg__nav > ul > li > span.class');
+        toggleElements.forEach(element => {
+            element.addEventListener('click', function (event) {
+                const parentLi = this.closest('li'); // 親の<li>を取得
+                const subMenu = parentLi.querySelector('ul'); // 対応するサブメニュー
+                const toggleIcon = this.querySelector('span.class') || this; // 対象の <span class> を取得
+
+                if (subMenu) {
+                    event.preventDefault(); // デフォルト動作をキャンセル
+                    subMenu.classList.toggle('is-open'); // サブメニューの開閉
+
+                    // アイコンの状態を切り替え
+                    if (toggleIcon) {
+                        toggleIcon.classList.toggle('is-open');
+                    }
+                }
+            });
+        });
+    });
+
+
+
+    // 初期化スクリプト
+    $('.l-main__topSlider__inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        arrows: true,
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    arrows: false,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }]
+    });
+
+    $('.l-main__featureSlider__inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        arrows: true,
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }]
+    });
+
+    $('.l-main__recommend__inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: true,
+        arrows: true,
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }]
+    });
+
+    const toTopButton = document.querySelector('.c-btn__totop');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            toTopButton.classList.add('is-visible');
+        } else {
+            toTopButton.classList.remove('is-visible');
+        }
+    });
+
+    toTopButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const tabs = document.querySelectorAll('.p-rankingnav input[type="radio"]');
+    const contents = document.querySelectorAll('.p-rankingcontent_content');
+
+    contents.forEach(content => {
+        content.style.display = 'none';
+    });
+    document.getElementById('p-rankingcontent_content-all').style.display = 'block';
+
+    tabs.forEach(tab => {
+        tab.addEventListener('change', function () {
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            const targetContent = document.getElementById(`p-rankingcontent_content-${this.id.split('-')[1]}`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+        });
+    });
+</script>
 
 </html>

@@ -35,19 +35,19 @@ module.exports = (env, argv) => {
       }),
       new HtmlWebpackPlugin({
         filename: 'about/index.html',
-        template: 'src/ejs/about/index.ejs',
+        template: 'src/ejs/template/_hbg.ejs',
       }),
 
       // php
       new CopyWebpackPlugin(
         PRODUCTION
           ? [
-              {
-                from: './src/api/*.php',
-                to: path.resolve(__dirname, 'public/api'),
-                flatten: true,
-              },
-            ]
+            {
+              from: './src/api/*.php',
+              to: path.resolve(__dirname, 'public/api'),
+              flatten: true,
+            },
+          ]
           : []
       ),
     ],
@@ -60,14 +60,14 @@ module.exports = (env, argv) => {
     optimization: {
       minimizer: PRODUCTION
         ? [
-            new UglifyJSPlugin({
-              uglifyOptions: {
-                compress: {
-                  drop_console: true,
-                },
+          new UglifyJSPlugin({
+            uglifyOptions: {
+              compress: {
+                drop_console: true,
               },
-            }),
-          ]
+            },
+          }),
+        ]
         : [],
     },
     module: {

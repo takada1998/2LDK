@@ -1,26 +1,27 @@
-import Home from '../pages/Home'
-import About from '../pages/About'
+import Home from '../pages/Home';
+import Hbg from '../pages/Hbg';
 
 export default class Router {
   constructor() {
     this.model = {
       pathName: location.pathname,
-    }
+    };
 
-    this.initRouting()
+    this.initRouting();
   }
 
   initRouting() {
-    const pathName = this.model.pathName
+    const pathName = this.model.pathName;
     switch (pathName) {
       case '/':
-        new Home()
-        break
-      case '/about':
-        new About()
-        break
+        new Home();
+        break;
+      case '/hbg':
+        new Hbg();
+        break;
       default:
-        break
+        console.log('No matching route found');
+        break;
     }
   }
 }

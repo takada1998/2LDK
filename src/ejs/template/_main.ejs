@@ -1,6 +1,6 @@
-<div class="l-main">
+<main class="l-main">
     <!--topslider-->
-    <div class="l-main__topSlider">
+    <section class="l-main__topSlider">
         <div class="l-main__topSlider__inner">
             <div class="p-topSlider__item">
                 <div class="p-topSlider__image">
@@ -33,36 +33,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script>
-        $('.l-main__topSlider__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: false,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            //centerPadding: '20%'
-            responsive: [
-                {
-                    breakpoint: 1440,
-                    settings: {
-                        arrows: false,
-                        centerPadding: '30px',
-                        slidesToShow: 1
-                    }
-                }]
-        });
-    </script>
-
+    </section>
     <!--FEATURE-->
-    <div class="l-main__feature">
+    <section class="l-main__feature">
         <h2 class="c-title">FEATURE</h2>
         <div class="l-main__featureSlider">
             <div class="l-main__featureSlider__inner">
@@ -137,31 +110,9 @@
         <div class="c-btn c-btn__feature">
             <a href="#"><span class="c-text__btn">VIEW ALL</span></a>
         </div>
-    </div>
-
-    <script>
-        $('.l-main__featureSlider__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            dots: true,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerPadding: '30px',
-                        slidesToShow: 1
-                    }
-                }]
-        });</script>
-
+    </section>
     <!--BRAND-->
-    <div class="l-main__brand">
+    <section class="l-main__brand">
         <h2 class="c-title">HOUSE BRAND</h2>
         <div class="l-main__brand__wrap">
             <div class="l-main__brand__inner">
@@ -206,10 +157,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--newitem-->
-    <div class="l-main__newitem">
+    <section class="l-main__newitem">
         <h2 class="c-title">NEW ITEM</h2>
         <div class="l-main__newitem__list">
             <div class="l-main__newitem__inner">
@@ -274,10 +225,10 @@
         <div class="c-btn">
             <a href="#"><span class="c-text__btn">MORE</span></a>
         </div>
-    </div>
+    </section>
 
     <!--RECOMMEND ITEMS-->
-    <div class="l-main__recommend">
+    <section class="l-main__recommend">
         <h2 class="c-title">RECOMMEND ITEMS</h2>
         <div class="l-main__recommend__list">
             <div class="l-main__recommend__inner">
@@ -360,29 +311,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <script>
-        $('.l-main__recommend__inner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            dots: true,
-            arrows: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false
-                    }
-                }]
-        });</script>
-
+    </section>
     <!--RANKING-->
-    <div class="l-main__ranking">
+    <section class="l-main__ranking">
         <h2 class="c-title">RANKING</h2>
         <div class="p-rankingnav">
             <input type="radio" id="tab-all" name="ranking-tab" checked>
@@ -904,59 +835,5 @@
             </div>
         </div>
         <div class="c-btn__totop"></div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toTopButton = document.querySelector('.c-btn__totop'); // トップへ戻るボタン
-
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 300) { // スクロール量が300pxを超えたら表示
-                        toTopButton.classList.add('is-visible');
-                    } else {
-                        toTopButton.classList.remove('is-visible');
-                    }
-                });
-
-                toTopButton.addEventListener('click', function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        </script>
-    </div>
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.p-rankingnav input[type="radio"]');
-            const contents = document.querySelectorAll('.p-rankingcontent_content');
-
-            contents.forEach(content => {
-                content.style.display = 'none'; // すべてのコンテンツを非表示に
-            });
-            document.getElementById('p-rankingcontent_content-all').style.display = 'block';
-
-            tabs.forEach(tab => {
-                tab.addEventListener('change', function () {
-                    // 全てのコンテンツを非表示にする
-                    contents.forEach(content => {
-                        content.style.display = 'none';
-                    });
-
-                    // 選択されたタブに対応するコンテンツを表示する
-                    const targetContent = document.getElementById(`p-rankingcontent_content-${this.id.split('-')[1]}`);
-                    if (targetContent) {
-                        targetContent.style.display = 'block';
-                    }
-                });
-            });
-        });
-
-    </script>
-</div>
-
-
-</div>
+    </section>
+</main>

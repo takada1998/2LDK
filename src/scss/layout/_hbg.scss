@@ -11,6 +11,12 @@
     transform: translateX(-400px);
     transition: transform 0.3s ease;
 
+    @media screen and (max-width: 768px) {
+
+        width: calc(100% - 58px);
+    }
+
+
     &__top {
         opacity: 0;
         padding: 40px 20px;
@@ -87,6 +93,7 @@
                     padding: 20px 30px 20px 20px;
                     position: relative;
                     display: block;
+                    font-size: 14px;
 
                     span {
                         display: block;
@@ -105,6 +112,8 @@
                         line-height: 0;
                         cursor: pointer;
                         background: #F5F7F7;
+
+                        padding: 0;
 
                         &::before {
                             content: "";
@@ -296,4 +305,24 @@
 
 .l-hbg__nav a:hover {
     color: rgba(0, 0, 0, 0.6);
+}
+
+.l-hbg__nav span.class {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.l-hbg__nav span.class.is-open {
+    transform: rotate(-135deg);
+}
+
+.l-hbg__nav span span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+.l-hbg__nav span span.is-open {
+    transform: rotate(-135deg);
 }

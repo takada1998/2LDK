@@ -1,5 +1,5 @@
 <!--ハンバーガーメニュー-->
-<div class="l-hbg">
+<section class="l-hbg">
     <div class="l-hbg__top">
         <span>WELCOME</span>
     </div>
@@ -24,7 +24,10 @@
                         <a href="#">ALL</a>
                     </li>
                     <li>
-                        <a href="#">MENS<span class>open</span></a>
+                        <a href="#">
+                            MENS
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -41,7 +44,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">WOMEN<span class>open</span></a>
+                        <a href="#">
+                            WOMEN
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">TOPS</a>
@@ -58,7 +64,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#">GOODS<span class>open</span></a>
+                        <a href="#">
+                            WOMEN
+                            <span class="class">open</span>
+                        </a>
                         <ul>
                             <li>
                                 <a href="#">SHOES</a>
@@ -103,42 +112,6 @@
         </ul>
     </div>
     <div class="l-hbg__btn"></div>
-</div>
+</section>
 <div class="l-hbg__overlay"></div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const hbgMenu = document.querySelector('.c-hbgmenu'); // ハンバーガーメニュー
-        const hbg = document.querySelector('.l-hbg'); // ハンバーガーメニュー本体
-        const hbgCloseBtn = document.querySelector('.l-hbg__btn'); // 閉じるボタン
-        const overlay = document.querySelector('.l-hbg__overlay'); // オーバーレイ
-
-        hbgMenu.addEventListener('click', function () {
-            hbg.classList.add('is-active');
-            overlay.classList.add('is-active');
-        });
-
-        hbgCloseBtn.addEventListener('click', function () {
-            hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active');
-        });
-
-        overlay.addEventListener('click', function () {
-            hbg.classList.remove('is-active');
-            overlay.classList.remove('is-active');
-        });
-
-        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a');
-        toggleElements.forEach(element => {
-            element.addEventListener('click', function (event) {
-                const parentLi = this.closest('li');
-                const subMenu = parentLi.querySelector('ul');
-
-                if (subMenu) {
-                    event.preventDefault();
-                    subMenu.classList.toggle('is-open');
-                }
-            });
-        });
-    });
-
-</script>
+<!--<script src="assets/javascripts/hbgMenu.js"></script>-->

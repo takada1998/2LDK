@@ -7,6 +7,7 @@
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --watch",
     "prod": "webpack --mode production",
+    "build": "webpack --mode production",
     "sass-ver": "sass --version"
   },
   "author": "",
@@ -22,8 +23,9 @@
     "css-loader": "^3.5.3",
     "cssnano": "^4.1.10",
     "ejs-compiled-loader": "^1.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "7",
     "eslint-loader": "^3.0.3",
+    "eslint-webpack-plugin": "2",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "sass": "^1.45.2",

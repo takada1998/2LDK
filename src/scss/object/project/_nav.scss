@@ -9,25 +9,31 @@
     left: 0;
     bottom: 0;
 
-    &__item {
-        width: 32%;
-        max-width: 100px;
+    ul {
+        display: contents;
 
-        a {
-            display: block;
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 50px;
-            text-align: center;
-            padding-bottom: 10px;
+        li {
+            width: 32%;
+            max-width: 100px;
 
-            @media screen and (max-width: 768px) {
-                padding-bottom: 0;
-            }
+            a {
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 50px;
+                text-align: center;
+                padding-bottom: 10px;
 
-            &:hover {
-                color: rgba(0, 0, 0, 0.6);
+                @media screen and (max-width: 768px) {
+                    padding-bottom: 0;
+                }
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.6);
+                }
             }
         }
+
+
     }
 }

@@ -94,7 +94,7 @@
         });
 
         // トグルメニューの開閉（MENS, WOMEN, GOODS, ITEMを含む）
-        const toggleElements = document.querySelectorAll('.l-hbg__nav span > span, .l-hbg__nav a, .l-hbg__nav > ul > li > span.class');
+        const toggleElements = document.querySelectorAll('.l-hbg__nav > ul > li > span, .l-hbg__nav > ul > li > ul > li > a, .l-hbg__nav > ul > li > span.class');
         toggleElements.forEach(element => {
             element.addEventListener('click', function (event) {
                 const parentLi = this.closest('li'); // 親の<li>を取得
